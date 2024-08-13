@@ -1,0 +1,71 @@
+/* default = light theme */
+:root {
+  color-scheme: light dark;
+  color: #213547;
+  background-color: #ffffff;
+}
+
+/* global */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  color: #747bff;
+}
+
+button {
+  background-color: #f9f9f9;
+}
+
+/* Light theme */
+.theme-light {
+  color: #213547;
+  background-color: #ffffff;
+}
+
+.theme-light a:hover {
+  color: #747bff;
+}
+
+.theme-light button {
+  background-color: #f9f9f9;
+}
+
+/* Dark theme */
+.theme-dark {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.theme-dark a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.theme-dark button {
+  background-color: #333333;
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+
+  .theme-light {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  .theme-dark {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+}
