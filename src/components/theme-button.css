@@ -1,0 +1,19 @@
+.theme-toggle-button {
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-light .theme-toggle-button {
+    background-color: #f9f9f9;
+    color: #213547;
+}
+
+.theme-dark .theme-toggle-button {
+    background-color: #333333;
+    color: #ffffff;
+}
