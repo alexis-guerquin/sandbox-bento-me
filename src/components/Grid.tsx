@@ -1,9 +1,13 @@
-// src/components/Grid.tsx
 import React from 'react';
+import Card from './Card';
 import './Grid.css';
 
 type GridItemProps = {
     size: '1x1' | '2x1' | '1x2' | '2x2';
+    logo: string;
+    title: string;
+    subtitle: string;
+    onFollow: () => void;
 };
 
 type GridProps = {
@@ -14,8 +18,14 @@ const Grid: React.FC<GridProps> = ({ items }) => {
     return (
         <div className="grid-container">
             {items.map((item, index) => (
-                <div key={index} className={`grid-item size-${item.size}`}>
-                </div>
+                <Card
+                    key={index}
+                    size={item.size}
+                    logo={item.logo}
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    onFollow={item.onFollow}
+                />
             ))}
         </div>
     );

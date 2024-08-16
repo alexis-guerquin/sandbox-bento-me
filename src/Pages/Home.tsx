@@ -2,26 +2,26 @@ import Grid from '../components/Grid';
 import './home.css';
 
 function App() {
+  const handleFollow = () => {
+    alert('Followed!');
+  };
 
-  const createGridItem = (size: '1x1' | '2x1' | '1x2' | '2x2', content: string) => ({
-    size,
-    content,
-  });
+  const xd = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png"
 
   const gridItems = [
-    createGridItem('1x1', '1x1'),
-    createGridItem('1x2', '1x2'),
-    createGridItem('2x1', '2x1'),
-    createGridItem('2x2', '2x2'),
-    createGridItem('1x1', '1x1'),
+      { size: '1x1' as const, logo: xd, title: 'Card 1', subtitle: 'Subtitle 1', onFollow: handleFollow },
+      { size: '1x2' as const, logo: 'logo2.png', title: 'Card 2', subtitle: 'Subtitle 2', onFollow: handleFollow },
+      { size: '2x1' as const, logo: 'logo3.png', title: 'Card 3', subtitle: 'Subtitle 3', onFollow: handleFollow },
+      { size: '2x2' as const, logo: 'logo4.png', title: 'Card 4', subtitle: 'Subtitle 4', onFollow: handleFollow },
+      { size: '1x1' as const, logo: 'logo5.png', title: 'Card 5', subtitle: 'Subtitle 5', onFollow: handleFollow },
   ];
 
   return (
-    <div className='app'>
-      <div className='grid'>
-        <Grid items={gridItems} />
+      <div className='app'>
+          <div className='grid'>
+              <Grid items={gridItems} />
+          </div>
       </div>
-    </div>
   );
 }
 
