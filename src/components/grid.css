@@ -2,22 +2,12 @@
     --widget-width: 175px; /* convert to dynamic */
     --widget-padding: 24px; /* convert to dynamic */
     display: grid;
-    grid-template-columns: repeat(4, var(--widget-width));
-    grid-auto-rows: var(--widget-width);
+    /* grid-template-columns: repeat(4, var(--widget-width));
+    grid-auto-rows: minmax(var(--widget-width), auto); */
+    grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes de taille égale */
+    grid-auto-rows: minmax(var(--widget-width), auto); /* La hauteur des rangées s'ajuste automatiquement */
     gap: 10px;
     position: relative;
-}
-
-.grid-container::before {
-    content: '';
-    width: 0;
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
-}
-
-.grid-container > *:first-child {
-    grid-row: 1 / 1;
-    grid-column: 1 / 1;
 }
 
 .grid-item {
