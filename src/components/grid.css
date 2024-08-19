@@ -15,4 +15,6 @@
     min-width: var(--widget-width);
     height: 100%;
     box-sizing: border-box;
+    cursor: grab;
+    position: relative;
 }
