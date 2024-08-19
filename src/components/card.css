@@ -1,0 +1,104 @@
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        height: 100%;
+    }
+
+    .card-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-text {
+        margin-bottom: 8px;
+    }
+
+    .card-title {
+        margin: 0;
+        padding-top: 4px;
+        font-size: .9em;
+        cursor: pointer;
+    }
+
+    .card-subtitle {
+        color: gray;
+        font-size: .75em;
+        margin: 0;
+    }
+
+    .card-button {
+        padding: calc(var(--widget-width) / 28) calc(var(--widget-width) / 10);
+        background-color: #4093EF;
+        position: absolute;
+        bottom: 0;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .card-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* card sizes */
+
+    .size-1x1 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .size-2x1 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .size-1x2 {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+
+    .size-1x2 .card-button {
+        bottom: calc(var(--widget-width) + 1/2 * var(--widget-padding) - 2px);
+    }
+    
+    .size-2x2 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    
+    .size-2x1 .extra-div {
+        background-color: #f3f3f3;
+        width: calc(var(--widget-width) - 2 * var(--widget-padding));
+        height: calc(var(--widget-width) - 2 * var(--widget-padding));
+    }
+
+    .size-2x1 .card-content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .size-1x2 .extra-div {
+        background-color: #f3f3f3;
+        width: calc(var(--widget-width) - 2 * var(--widget-padding));
+        height: calc(var(--widget-width) - 2 * var(--widget-padding));
+        margin-top: auto;
+    }
+
+    .size-2x2 .extra-2x2 {
+        background-color: #f3f3f3;
+        width: calc(2 * var(--widget-width) - var(--widget-padding));
+        height: calc(var(--widget-width) - 2 * var(--widget-padding));
+        margin-top: auto;
+    }
+
+    .size-2x2 .card-button {
+        position: absolute;
+        top: 0px;
+        bottom: auto;
+        right: 0px;
+    }
