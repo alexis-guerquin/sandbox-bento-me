@@ -61,7 +61,7 @@
     }
 
     .size-1x2 .card-button {
-        bottom: calc(var(--widget-width) + 1/2 * var(--widget-padding) - 2px);
+        bottom: calc(var(--widget-width) + var(--widget-padding) + 1/4 * var(--widget-padding));
     }
     
     .size-2x2 {
