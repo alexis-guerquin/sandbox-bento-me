@@ -1,6 +1,7 @@
 .grid-container {
     --widget-width: 175px; /* convert to dynamic */
     --widget-padding: 24px; /* convert to dynamic */
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(var(--widget-width), auto);
@@ -15,4 +16,6 @@
     min-width: var(--widget-width);
     height: 100%;
     box-sizing: border-box;
+    cursor: grab;
+    position: relative;
 }
