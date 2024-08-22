@@ -20,7 +20,7 @@ const Grid: React.FC<GridProps> = ({ items }) => {
             {items.map((item, index) => (
                 <Card
                     key={index}
-                    size={item.size}
+                    initialSize={item.size}
                     logo={item.logo}
                     title={item.title}
                     subtitle={item.subtitle}
